@@ -26,7 +26,7 @@ gulp.task('browser-sync', ['middleman-build'], function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch('source/*.html.erb', ['browser-reload']);
+  gulp.watch('source/*.erb', ['browser-reload']);
   gulp.watch('source/partials/*.erb', ['browser-reload']);
   gulp.watch('source/layouts/*.erb', ['browser-reload']);
   gulp.watch('source/assets/javascripts/*.js', ['browser-reload']);
