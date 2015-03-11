@@ -1,0 +1,14 @@
+# Bundler config
+/.bundle
+
+# Built site
+/build
+
+# Data
+/data
+
+# Vendor
+/vendor
+
+# Misc
+.DS_Store

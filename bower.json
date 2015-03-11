@@ -1,0 +1,8 @@
+{
+  "name": "middleman-boilerplate",
+  "version": "0.0.1",
+  "dependencies": {
+    "normalize-scss"  : "~3.0.2",
+    "modernizr": "~2.8.3"
+  }
+}
