@@ -13,6 +13,11 @@ end
 # Pretty urls
 activate :directory_indexes
 
+# Google Analytics
+activate :google_analytics do |ga|
+  ga.tracking_id = "UA-11425486-15"
+end
+
 # Minimize css/js and fix assets for Build
 configure :build do 
   activate :minify_css

@@ -10,6 +10,7 @@
   <%= stylesheet_link_tag "application" %>
   <%= javascript_include_tag "application" %>
   <%= javascript_include_tag "modernizr" %>
+
 </head>
 <body>
   <%= partial "header" %>
@@ -19,5 +20,6 @@
   <%= yield %>
 
   <%= partial "footer" %>
+  <%= google_analytics_tag %>
 </body>
 </html>
