@@ -36,7 +36,7 @@ gulp.task('rsync', ['middleman-build'], function() {
       root: 'build',
       hostname: '178.62.13.136',
       username: 'root',
-      destination: '/var/www/middleman-boilerplate',
+      destination: 'var/www/rtfm.kollegorna.se',
       incremental: true,
       progress: true,
       relative: true,
