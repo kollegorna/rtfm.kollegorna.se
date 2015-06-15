@@ -1,10 +1,11 @@
 {
-  "name": "middleman-boilerplate",
+  "name": "kollegorna-rtfm",
   "version": "0.0.1",
-  "description": "Middleman boilerplate with Gulp, BrowserSync and Bower",
+  "description": "rtfm.kollegorna.se",
   "devDependencies": {
-    "gulp": "~3.8.11",
+    "bower": "~1.3.12",
     "browser-sync": "~2.2.3",
-    "bower": "~1.3.12"
+    "gulp": "~3.8.11",
+    "gulp-rsync": "0.0.5"
   }
 }

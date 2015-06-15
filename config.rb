@@ -2,24 +2,29 @@
 config[:css_dir] = 'assets/stylesheets'
 config[:js_dir] = 'assets/javascripts'
 config[:images_dir] = 'assets/images'
+config[:images_extensions] = %w( svg jpg jpeg gif png webp )
 config[:partials_dir] = 'partials'
 
 # Configure path for bower assets
 after_configuration do
   @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
-  sprockets.append_path File.join "#{root}", @bower_config["directory"]
+  assets_dir = @bower_config["directory"] # "vendor/assets/bower_components"
+  sprockets.append_path File.join "#{root}", assets_dir
+
+  masks = images_extensions.map { |ext| "#{assets_dir}/**/*.#{ext}" }
+
+  # Import all the images from bower assets directory to build/assets/images
+  Dir[*masks].each do |file_path|
+    relative_path = file_path[("#{assets_dir}/".length)..-1] # e.g.: "open-iconic/png/resize-width.png"
+    sprockets.import_asset(relative_path) { "assets/images/#{relative_path}" }
+  end
 end
 
 # Pretty urls
 activate :directory_indexes
 
-# Google Analytics
-activate :google_analytics do |ga|
-  ga.tracking_id = "UA-11425486-15"
-end
-
 # Minimize css/js and fix assets for Build
-configure :build do 
+configure :build do
   activate :minify_css
   activate :minify_javascript
   activate :relative_assets

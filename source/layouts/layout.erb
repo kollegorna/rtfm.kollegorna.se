@@ -8,18 +8,16 @@
   <title><%= current_page.data.title || "Title" %></title>
 
   <%= stylesheet_link_tag "application" %>
-  <%= javascript_include_tag "application" %>
   <%= javascript_include_tag "modernizr" %>
-
 </head>
 <body>
   <%= partial "header" %>
 
-  <%= partial "navigation" %>
-
-  <%= yield %>
+  <article class="<%= current_page.data.body_classes %>">
+    <%= yield %>
+  </article>
 
   <%= partial "footer" %>
-  <%= google_analytics_tag %>
+  <%= javascript_include_tag "application" %>
 </body>
 </html>
