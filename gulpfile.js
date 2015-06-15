@@ -1,5 +1,6 @@
 var gulp = require('gulp');
-var rsync = require('gulp-rsync');
+var gutil = require('gulp-util');
+var rsync = require('rsyncwrapper').rsync;
 var browserSync = require('browser-sync');
 var cp = require('child_process');
 var messages = {
@@ -31,21 +32,17 @@ gulp.task('watch', function() {
 });
 
 gulp.task('rsync', ['middleman-build'], function() {
-  gulp.src('build/**')
-    .pipe(rsync({
-      root: 'build',
-      hostname: '178.62.13.136',
-      username: 'root',
-      destination: 'var/www/rtfm.kollegorna.se',
-      incremental: true,
-      progress: true,
-      relative: true,
-      emptyDirectories: true,
-      recursive: true,
-      clean: true,
-      exclude: ['.DS_Store'],
-      include: []
-    }));
+  rsync({
+    ssh: true,
+    src: './build/',
+    dest: 'root@178.62.13.136:/var/www/rtfm.kollegorna.se',
+    recursive: true,
+    syncDest: true,
+    args: ['--verbose'],
+    exclude: ['.DS_Store']
+  }, function(error, stdout, stderr, cmd) {
+      gutil.log(stdout);
+  });
 });
 
 gulp.task('serve', ['browser-sync', 'watch']);
