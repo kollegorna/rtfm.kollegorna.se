@@ -12,7 +12,7 @@ This is the source for our manuals: https://rtfm.kollegorna.se
 
 Runs bundle install and bower install
 
-    $ gulp install 
+    $ gulp install
 
 Builds Middleman and create a BrowserSync server that watches all changes
     
