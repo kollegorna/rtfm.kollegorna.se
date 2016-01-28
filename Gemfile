@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
 
-gem "middleman", "~>3.3.10"
-gem "middleman-google-analytics"
+gem "middleman", "~>4.0.0"
+gem "middleman-sprockets", "~>4.0.0.rc"
+gem "middleman-autoprefixer"
+gem "middleman-livereload"

@@ -59,13 +59,13 @@
   </script>
 </head>
 <body>
-  <%= partial "header" %>
+  <%= partial "partials/header" %>
 
   <article class="<%= current_page.data.body_classes %>">
     <%= yield %>
   </article>
 
-  <%= partial "footer" %>
+  <%= partial "partials/footer" %>
   <%= javascript_include_tag "application" %>
 </body>
 </html>
