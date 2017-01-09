@@ -10,18 +10,18 @@ This 2017 update for our manuals: https://rtfm.kollegorna.se
 
 ### Gulp commands
 
-Runs bundle install and bower install
+Runs bundle install and bower install:
 
     $ gulp install
 
-Builds Middleman and create a BrowserSync server that watches all changes
+Runs bundle exec middleman:
+
+    $ gulp middleman
+
+Builds Middleman and create a BrowserSync server that watches all changes:
 
     $ gulp serve
 
-Builds Middleman
+Builds Middleman:
 
     $ gulp build
-
-Builds Middleman and deploys with rsync
-
-    $ gulp deploy
