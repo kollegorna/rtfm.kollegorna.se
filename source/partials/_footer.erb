@@ -6,39 +6,25 @@
 
   <p>
     Be sure not to miss <a href="https://labs.kollegorna.se">our labs</a>.
-    Or read about us <a href="https://www.kollegorna.se/english">in english</a> or
+    Or read about us <a href="https://www.kollegorna.se/en">in english</a> or
     <a href="https://www.kollegorna.se">på svenska</a>.
   </p>
 
   <p>Cover image by <a href="http://graphicriver.net/user/Dexav23">Deka Sepdian</a>.</p>
 
   <ul class="t-list-inline">
-    <li>
-      <a href="https://twitter.com/kollegorna">
-        <%= image_tag 'icon-twitter.svg' %>
-      </a>
-    </li>
-    <li>
-      <a href="https://github.com/kollegorna">
-        <%= image_tag 'icon-github.svg' %>
-      </a>
-    </li>
-    <li>
-      <a href="https://facebook.com/kollegorna">
-        <%= image_tag 'icon-facebook.svg' %>
-      </a>
-    </li>
-    <li>
-      <a href="https://instagram.com/kollegorna">
-        <%= image_tag 'icon-instagram.svg' %>
-      </a>
-    </li>
+    <li><a href="https://twitter.com/kollegorna" title="Twitter"><%= image_tag 'icon-twitter.svg', alt: 'Twitter' %></a></li>
+    <li><a href="https://github.com/kollegorna" title="GitHub"><%= image_tag 'icon-github.svg', alt: 'GitHub' %></a></li>
+    <li><a href="https://dribbble.com/kollegorna" title="Dribbble"><%= image_tag 'icon-dribbble.svg', alt: 'Dribbble' %></a></li>
+    <li><a href="https://facebook.com/kollegorna" title="Facebook"><%= image_tag 'icon-facebook.svg', alt: 'Facebook' %></a></li>
+    <li><a href="https://instagram.com/kollegorna" title="Instagram"><%= image_tag 'icon-instagram.svg', alt: 'Instagram' %></a></li>
   </ul>
 
   <p class="footer__cc">
-    <a href="https://creativecommons.org/licenses/by/2.5/deed.en_US" title="All content is licensed with Creative Commons Attribution 2.5.">
-      <%= image_tag 'icon-cc.svg' %>
-      <%= image_tag 'icon-cc-attribution.svg' %>
+    <a href="https://creativecommons.org/licenses/by/2.5/deed.en_US" title="All content is licensed with Creative Commons Attribution 2.5">
+      <span class="visuallyhidden">All content is licensed with Creative Commons Attribution 2.5</span>
+      <%= image_tag 'icon-cc.svg', role: 'presentation' %>
+      <%= image_tag 'icon-cc-attribution.svg', role: 'presentation' %>
     </a>
   </p>
 </footer>
