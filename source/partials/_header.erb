@@ -1,3 +1,8 @@
 <header class="header">
-  <a href="/"><%= image_tag 'lumbergh.svg' %></a>
+    <a href="/">
+        <% if current_page.data.body_classes == 'page-home' %>
+        <span class="header__hero"><%= image_tag 'lumbergh.svg', role: 'presentation' %></span>
+        <% end %>
+        <span class="header__logo"><%= image_tag 'logo.svg', alt: 'The Kollegorna Manuals' %></span>
+    </a>
 </header>

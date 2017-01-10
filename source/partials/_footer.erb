@@ -1,4 +1,9 @@
 <footer role="contentinfo" class="footer">
+
+  <% if current_page.data.body_classes != 'page-home' %>
+  <p><%= image_tag 'lumbergh.svg', class: 'footer__hero', role: 'presentation' %></p>
+  <% end %>
+
   <p>
     Be sure not to miss <a href="https://labs.kollegorna.se">our labs</a>.
     Or read about us <a href="https://www.kollegorna.se/english">in english</a> or
