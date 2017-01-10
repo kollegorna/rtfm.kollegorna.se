@@ -8,5 +8,8 @@
     "gulp": "~3.8.11",
     "gulp-util": "~3.0.5",
     "rsyncwrapper": "~0.4.3"
+  },
+  "dependencies": {
+    "gulp-svgmin": "^1.2.3"
   }
 }
