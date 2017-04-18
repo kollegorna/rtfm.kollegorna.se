@@ -11,7 +11,7 @@
 // -----------------------------------------------------------------------------
 
 .button {
-	border-color: currentColor;
+	border-color: $ds-color-link;
 }
 
 hr {
@@ -44,8 +44,9 @@ h2{
     font-weight: 700;
 }
 
-a {
-	color: $ds-color-green;
+a:not(.button) {
+  border-bottom: 2px solid $ds-color-link;
+	color: $ds-color-text;
 }
 
 body {
@@ -106,6 +107,16 @@ body {
 
   &__cc {
     opacity: .5;
+
+    a {
+      border-bottom: 0;
+    }
+  }
+
+  ul {
+    a {
+      border-bottom: 0;
+    }
   }
 }
 

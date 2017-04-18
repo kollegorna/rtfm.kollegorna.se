@@ -2,6 +2,6 @@
   "name": "kollegorna-rtfm",
   "version": "0.0.1",
   "dependencies": {
-    "kollegorna-design-system": "kollegorna/design-system#2017"
+    "kollegorna-design-system": "kollegorna/design-system"
   }
 }
