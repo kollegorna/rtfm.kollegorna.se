@@ -62,10 +62,7 @@ gulp.task('middleman', function(done) {
 gulp.task('serve', ['browser-sync', 'watch']);
 gulp.task('build', ['middleman-build']);
 gulp.task('deploy', ['rsync']);
-gulp.task('install-bower', function(done) {
-  cp.spawn('bower', ['install'], { stdio: 'inherit' }).on('close', done);
-});
 gulp.task('install-bundle', function(done) {
   cp.spawn('bundle', ['install'], { stdio: 'inherit' }).on('close', done);
 });
-gulp.task('install', ['install-bundle', 'install-bower']);
+gulp.task('install', ['install-bundle']);
