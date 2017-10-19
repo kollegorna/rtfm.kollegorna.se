@@ -7,8 +7,7 @@ config[:partials_dir] = 'partials'
 
 # Configure path for bower assets
 after_configuration do
-  @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
-  assets_dir = @bower_config["directory"] # "vendor/assets/bower_components"
+  assets_dir = "node_modules/@bower_components"
   sprockets.append_path File.join "#{root}", assets_dir
 
   masks = images_extensions.map { |ext| "#{assets_dir}/**/*.#{ext}" }
