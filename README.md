@@ -7,23 +7,11 @@ Visit: [rtfm.kollegorna.se](https://rtfm.kollegorna.se)
 1. Make sure you have [the same Ruby version installed as the repo](https://github.com/kollegorna/rtfm.kollegorna.se/blob/master/.ruby-version).
 2. Install [Bundler](https://rubygems.org/gems/bundler) and [Node.js](http://nodejs.org).
 3. Clone repository
-4. `$ npm install`
-5. `$ gulp install`
+4. `$ yarn install`
+5. `$ bundle install`
 
-### Gulp commands
+### Run locally
 
-Runs bundle install and bower install:
+Run Middleman:
 
-    $ gulp install
-
-Runs bundle exec middleman:
-
-    $ gulp middleman
-
-Builds Middleman and create a BrowserSync server that watches all changes:
-
-    $ gulp serve
-
-Builds Middleman:
-
-    $ gulp build
+    $ bundle exec middleman
