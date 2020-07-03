@@ -1,6 +1,6 @@
 This is how we do things at Kollegorna, a remote first digital agency.
 
-Visit: [rtfm.kollegorna.se](https://rtfm.kollegorna.se)
+Visit: [rtfm.kollegorna.se](https://rtfm.kollegorna.se) [![Netlify Status](https://api.netlify.com/api/v1/badges/66ae196f-4dac-41bb-84fe-86226736b837/deploy-status)](https://app.netlify.com/sites/rtfm-kollegorna-se/deploys)
 
 ## Local setup
 
